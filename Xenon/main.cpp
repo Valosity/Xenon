@@ -1,16 +1,9 @@
 #include <sfml\Graphics.hpp>
 
-
 void draw()
 {
-    sf::Image plyrImg;
-    if (!plyrImg.loadFromFile("S_player.jpg"))
-    {
-        //Error
-        printf("No image for Player found");
-    }
-}
 
+}
 int main()
 {
     sf::RenderWindow window(sf::VideoMode(650, 700), "Xenon", sf::Style::Default);
@@ -28,7 +21,16 @@ int main()
             }
         }
         window.clear(sf::Color::Black);
-        draw();
+        sf::Texture plyrImg;
+        if (!plyrImg.loadFromFile("Assets/S_player.png"))
+        {
+            //Error
+            printf("No image for Player found");
+        }
+        plyrImg.setSmooth(true);
+        sf::Sprite plyrSpr;
+        plyrSpr.setTexture(plyrImg);
+        window.draw(plyrSpr);
         window.display();
         
     }
