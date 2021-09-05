@@ -33,9 +33,15 @@
     <ClCompile Include="Draw.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="PlayerProj.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Image Include="Assets\S_Player.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Assets\S_PlyrProjectile.png">
       <Filter>Resource Files</Filter>
     </Image>
   </ItemGroup>
@@ -44,6 +50,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Engine.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PlayerProj.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

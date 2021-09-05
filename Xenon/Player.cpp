@@ -2,6 +2,7 @@
 #include "Player.h"
 
 
+
 Player::Player()
 {
 	//Set player speed
@@ -12,7 +13,6 @@ Player::Player()
 	m_RightPress = false;
 
 	//Set player texture
-	m_Tex.loadFromFile("Assets/S_player.png");
 	if (!m_Tex.loadFromFile("Assets/S_player.png"))
 	{
 		//Error
@@ -36,24 +36,19 @@ sf::Sprite Player::getSprite()
 	return m_Spr;
 }
 
-void Player::moveLeft()
+void Player::moveLeft(bool value)
 {
-	m_LeftPress = true;
+	m_LeftPress = value;
 }
 
-void Player::moveRight()
+void Player::moveRight(bool value)
 {
-	m_RightPress = true;
+	m_RightPress = value;
 }
 
-void Player::stopLeft()
+sf::Vector2f Player::getPosition()
 {
-	m_LeftPress = false;
-}
-
-void Player::stopRight()
-{
-	m_RightPress = false;
+	return m_Pos;
 }
 
 void Player::update(float elapsedTime)

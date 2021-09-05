@@ -6,6 +6,7 @@ Engine::Engine()
 	m_Window.create(sf::VideoMode(650, 700), 
 		"Xenon", 
 		sf::Style::Titlebar | sf::Style::Close);
+
 }
 
 void Engine::start()
@@ -30,10 +31,11 @@ void Engine::start()
 
 		//Turn delta time into a fraction
 		float dtS = dt.asSeconds();
-
+		
 		//Call those private function
 		input();
 		update(dtS);
 		draw();
+		
 	}
 }

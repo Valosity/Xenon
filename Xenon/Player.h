@@ -20,12 +20,11 @@ public:
 	//Gets sprite so can be used in main
 	sf::Sprite getSprite();
 
-	//Movement functions that can be called
-	void moveLeft();
-	void moveRight();
+	sf::Vector2f getPosition();
 
-	void stopLeft();
-	void stopRight();
+	//Movement functions that can be called
+	void moveLeft(bool value);
+	void moveRight(bool value);
 
 	//Update player
 	void update(float elapsedTime);

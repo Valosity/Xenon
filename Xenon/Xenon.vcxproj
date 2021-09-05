@@ -150,14 +150,17 @@
     <ClCompile Include="Input.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Player.cpp" />
+    <ClCompile Include="PlayerProj.cpp" />
     <ClCompile Include="Update.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="Assets\S_Player.png" />
+    <Image Include="Assets\S_PlyrProjectile.png" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Engine.h" />
     <ClInclude Include="Player.h" />
+    <ClInclude Include="PlayerProj.h" />
   </ItemGroup>
   <ItemGroup>
     <Font Include="Fonts\DroidSans.ttf" />

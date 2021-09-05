@@ -12,19 +12,20 @@ void Engine::input()
 	//Movement input handling
 	if (sf::Keyboard::isKeyPressed(sf::Keyboard::A))
 	{
-		m_Player.moveLeft();
+		m_Player.moveLeft(true);
 	}
 	else
 	{
-		m_Player.stopLeft();
+		m_Player.moveLeft(false);
 	}
 	if (sf::Keyboard::isKeyPressed(sf::Keyboard::D))
 	{
-		m_Player.moveRight();
+		m_Player.moveRight(true);
 	}
 	else
 	{
-		m_Player.stopRight();
+		m_Player.moveRight(false);
 	}
+	
 }
 
